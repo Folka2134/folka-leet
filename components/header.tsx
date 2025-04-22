@@ -8,8 +8,13 @@ import { Settings } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export function Header() {
-  // make this any pass
-  const [user, setUser] = useState<any | null>(null);
+  type UserProfile = {
+    id: string;
+    display_name?: string;
+    email: string;
+  };
+
+  const [user, setUser] = useState<UserProfile | null>(null);
   const router = useRouter();
 
   useEffect(() => {
