@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Settings } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { User } from "@supabase/supabase-js";
 
 export function Header() {
-  const [user, setUser] = useState<User | null>(null);
+  // make this any pass
+  const [user, setUser] = useState<any | null>(null);
   const router = useRouter();
 
   useEffect(() => {
