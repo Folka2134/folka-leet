@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Settings } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export function Header() {
   type UserProfile = {
@@ -54,8 +55,15 @@ export function Header() {
 
   return (
     <header className="flex items-center justify-between p-4 bg-gray-900 text-white">
-      <div className="text-2xl font-bold ml-25">Folka Leet</div>
-
+      <div className="flex items-end text-2xl font-bold ml-25">
+        <Image
+          src={"/images/folka-leet_logo.png"}
+          alt="Folka Leet Logo"
+          height={70}
+          width={70}
+        />
+        Folka Leet
+      </div>
       <div className="flex items-center gap-4">
         <div>Hello, {user.display_name || user.email}</div>
         <Avatar className="h-10 w-10 bg-green-700">
