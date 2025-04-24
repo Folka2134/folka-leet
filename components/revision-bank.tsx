@@ -106,7 +106,7 @@ export function RevisionBank() {
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
         <Button variant="secondary" className="w-full">
-          View Current Revision Bank
+          View Revision Bank
         </Button>
       </DialogTrigger>
       <DialogContent className="max-w-4xl max-h-[80vh] overflow-auto">

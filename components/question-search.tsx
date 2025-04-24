@@ -86,7 +86,7 @@ export function QuestionSearch() {
   return (
     <div className="space-y-4">
       <h2 className="text-xl font-semibold">
-        Add LeetCode Question to Revision Bank:
+        Add a LeetCode Question to Revision Bank:
       </h2>
       <form onSubmit={handleSearch} className="flex gap-2">
         <Input

@@ -25,7 +25,7 @@ export default async function DashboardPage() {
       <main className="flex-1 container mx-auto px-4 py-8 max-w-6xl">
         <div className="text-center mb-8">
           <p className="text-gray-400">
-            Simplifying your LeetCode grind through spaced repetition
+            Simplifying your LeetCode journey through spaced repetition
           </p>
         </div>
 
