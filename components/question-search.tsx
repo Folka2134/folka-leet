@@ -17,7 +17,7 @@ export function QuestionSearch() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<Question[]>([]);
   const [isSearching, setIsSearching] = useState(false);
-  // const [isAdding, setIsAdding] = useState<number | null>(null); // Track which question is being added
+  const [isAdding, setIsAdding] = useState<number | null>(null); // Track which question is being added
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,10 +38,17 @@ export function QuestionSearch() {
   };
 
   const handleAddQuestion = async (question: Question) => {
-    // setIsAdding(question.id);
+    setIsAdding(question.id);
     try {
       console.log("Adding question:", question);
       const result = await addQuestionToBank(question);
+
+      if (result == true) {
+        toast("Info", {
+          description: `${question.title} is already in your revision bank`,
+        });
+        return;
+      }
 
       if (result) {
         toast("Success", {
@@ -62,7 +69,7 @@ export function QuestionSearch() {
         description: `Failed to add question: ${error instanceof Error ? error.message : "Unknown error"}`,
       });
     } finally {
-      // setIsAdding(null);
+      setIsAdding(null);
     }
   };
 
@@ -128,16 +135,6 @@ export function QuestionSearch() {
                   </Badge>
                 ))}
               </div>
-              {/* <Button */}
-              {/*   onClick={() => handleAddQuestion(question)} */}
-              {/*   disabled={isAdding !== null} */}
-              {/*   size="sm" */}
-              {/*   className="col-span-3" */}
-              {/* > */}
-              {/*   {isAdding === question.id */}
-              {/*     ? "Adding..." */}
-              {/*     : "Add to Revision Bank"} */}
-              {/* </Button> */}
             </div>
           ))}
         </div>

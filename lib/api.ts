@@ -25,7 +25,7 @@ export type UserQuestion = {
  */
 export async function addQuestionToBank(
   question: Question,
-): Promise<UserQuestion | null> {
+): Promise<UserQuestion | null | boolean> {
   try {
     console.log("Adding question to bank:", question);
 
@@ -118,69 +118,7 @@ export async function addQuestionToBank(
     if (existingUserQuestion && existingUserQuestion.length > 0) {
       console.log("Question already exists in user's bank");
 
-      // Return the existing user question with question data
-      const { data: fullUserQuestion, error: fullUserQuestionError } =
-        await supabase
-          .from("user_questions")
-          .select(
-            `
-          id, 
-          question_id, 
-          difficulty_rating, 
-          next_review_date, 
-          review_count, 
-          last_reviewed_at,
-          questions:question_id (
-            id,
-            title,
-            difficulty,
-            tags,
-            leetcode_id
-          )
-        `,
-          )
-          .eq("id", existingUserQuestion[0].id)
-          .single();
-
-      if (fullUserQuestionError) {
-        console.error(
-          "Error fetching full user question:",
-          fullUserQuestionError,
-        );
-        return null;
-      }
-
-      if (!fullUserQuestion) {
-        console.error("No full user question data returned");
-        return null;
-      }
-
-      console.log("Full user question data:", fullUserQuestion);
-
-      const questionData = Array.isArray(fullUserQuestion.questions)
-        ? fullUserQuestion.questions[0]
-        : fullUserQuestion.questions;
-
-      if (!questionData) {
-        console.error("Question data is missing");
-        return null;
-      }
-
-      return {
-        id: fullUserQuestion.id,
-        question_id: fullUserQuestion.question_id,
-        question: {
-          id: questionData.id,
-          title: questionData.title,
-          difficulty: questionData.difficulty,
-          tags: questionData.tags,
-          leetcode_id: questionData.leetcode_id,
-        },
-        difficulty_rating: fullUserQuestion.difficulty_rating,
-        next_review_date: fullUserQuestion.next_review_date,
-        review_count: fullUserQuestion.review_count,
-        last_reviewed_at: fullUserQuestion.last_reviewed_at,
-      };
+      return true;
     }
 
     // Calculate the next review date (today for new questions)
