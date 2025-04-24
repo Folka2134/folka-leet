@@ -54,21 +54,15 @@ export function Header() {
 
   return (
     <header className="flex items-center justify-between p-4 bg-gray-900 text-white">
-      <div className="flex items-center gap-2">
+      <div className="text-2xl font-bold ml-25">Folka Leet</div>
+
+      <div className="flex items-center gap-4">
+        <div>Hello, {user.display_name || user.email}</div>
         <Avatar className="h-10 w-10 bg-green-700">
           <AvatarFallback>
             {getInitials(user.display_name || "")}
           </AvatarFallback>
         </Avatar>
-        <div>Hello, {user.display_name || user.email}</div>
-      </div>
-
-      <div className="text-2xl font-bold">Folka.leet()</div>
-
-      <div className="flex items-center gap-2">
-        <Button variant="ghost" size="icon">
-          <Settings className="h-5 w-5" />
-        </Button>
         <Button variant="secondary" onClick={handleLogout}>
           Logout
         </Button>
