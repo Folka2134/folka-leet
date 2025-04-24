@@ -17,7 +17,7 @@ export function QuestionSearch() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<Question[]>([]);
   const [isSearching, setIsSearching] = useState(false);
-  const [isAdding, setIsAdding] = useState<number | null>(null); // Track which question is being added
+  // const [isAdding, setIsAdding] = useState<number | null>(null); // Track which question is being added
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,7 +38,7 @@ export function QuestionSearch() {
   };
 
   const handleAddQuestion = async (question: Question) => {
-    setIsAdding(question.id);
+    // setIsAdding(question.id);
     try {
       console.log("Adding question:", question);
       const result = await addQuestionToBank(question);
@@ -62,7 +62,7 @@ export function QuestionSearch() {
         description: `Failed to add question: ${error instanceof Error ? error.message : "Unknown error"}`,
       });
     } finally {
-      setIsAdding(null);
+      // setIsAdding(null);
     }
   };
 
