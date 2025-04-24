@@ -494,7 +494,7 @@ export async function searchLeetCodeQuestions(
   const fuse = new Fuse(leetcodeQuestions, options);
   const result = fuse.search(query);
 
-  return result.map((res: any) => res.item);
+  return result.map((res) => res.item);
 
   // // Filter questions based on the query
   // return leetcodeQuestions.filter(
