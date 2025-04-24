@@ -40,17 +40,17 @@ export default async function DashboardPage() {
         </div>
       </main>
 
-      <footer className="py-4 text-center text-gray-500 text-sm">
-        <div className="flex justify-center space-x-4 mb-2">
-          <a href="https://github.com" className="hover:text-white">
-            GitHub
-          </a>
-          <a href="https://linkedin.com" className="hover:text-white">
-            LinkedIn
-          </a>
-        </div>
-        <p>Contact Me:</p>
-      </footer>
+      {/* <footer className="py-4 text-center text-gray-500 text-sm"> */}
+      {/*   <div className="flex justify-center space-x-4 mb-2"> */}
+      {/*     <a href="https://github.com" className="hover:text-white"> */}
+      {/*       GitHub */}
+      {/*     </a> */}
+      {/*     <a href="https://linkedin.com" className="hover:text-white"> */}
+      {/*       LinkedIn */}
+      {/*     </a> */}
+      {/*   </div> */}
+      {/*   <p>Contact Me:</p> */}
+      {/* </footer> */}
     </div>
   );
 }
