@@ -1,6 +1,6 @@
 import { supabase } from "./supabase";
 import { calculateNextReviewDate, formatDateForDB } from "./spaced-repetition";
-import { leetcodeQuestions } from "./leetcode-questions";
+import { leetcodeQuestions } from "./recommended-questions-array";
 
 export type Question = {
   id: number;
