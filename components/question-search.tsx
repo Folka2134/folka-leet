@@ -93,7 +93,14 @@ export function QuestionSearch() {
           type="search"
           placeholder="Search for Questions"
           value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
+          onChange={(e) => {
+            const input = e.target.value;
+            setSearchQuery(input);
+
+            if (!input.trim()) {
+              setSearchResults([]);
+            }
+          }}
           className="flex-1"
         />
         <Button type="submit" disabled={isSearching}>

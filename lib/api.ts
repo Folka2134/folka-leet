@@ -1,6 +1,7 @@
 import { supabase } from "./supabase";
 import { calculateNextReviewDate, formatDateForDB } from "./spaced-repetition";
 import { leetcodeQuestions } from "./recommended-questions-array";
+import Fuse from "fuse.js";
 
 export type Question = {
   id: number;
@@ -484,11 +485,22 @@ export async function searchLeetCodeQuestions(
   // Return empty array if query is empty
   if (!query.trim()) return [];
 
-  // Filter questions based on the query
-  return leetcodeQuestions.filter(
-    (q) =>
-      q.title.toLowerCase().includes(query.toLowerCase()) ||
-      q.tags.some((tag) => tag.toLowerCase().includes(query.toLowerCase())) ||
-      q.leetcode_id === query,
-  );
+  const options = {
+    keys: ["title", "tags"],
+    threshold: 0.4,
+    includeScore: true,
+  };
+
+  const fuse = new Fuse(leetcodeQuestions, options);
+  const result = fuse.search(query);
+
+  return result.map((res: any) => res.item);
+
+  // // Filter questions based on the query
+  // return leetcodeQuestions.filter(
+  //   (q) =>
+  //     q.title.toLowerCase().includes(query.toLowerCase()) ||
+  //     q.tags.some((tag) => tag.toLowerCase().includes(query.toLowerCase())) ||
+  //     q.leetcode_id === query,
+  // );
 }
