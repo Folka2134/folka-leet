@@ -95,9 +95,7 @@ export function DueQuestions() {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-semibold">
-          Questions due for revision today:
-        </h2>
+        <h2 className="text-xl font-semibold">Questions due for revision:</h2>
         <div className="flex items-center gap-2">
           <div className="text-right">
             {new Date().toLocaleDateString("en-US", {
@@ -125,7 +123,6 @@ export function DueQuestions() {
         </div>
       ) : (
         <Table>
-          <TableCaption>Questions that need to be reviewed today</TableCaption>
           <TableHeader>
             <TableRow>
               <TableHead className="w-12">#</TableHead>
@@ -134,12 +131,15 @@ export function DueQuestions() {
               <TableHead>Tags</TableHead>
               <TableHead>Difficulty</TableHead>
               <TableHead>Revision Count</TableHead>
-              <TableHead className="text-right">Action</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {dueQuestions.map((question, index) => (
-              <TableRow key={question.id}>
+              <TableRow
+                key={question.id}
+                onClick={() => handleReview(question)}
+                className="cursor-pointer transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+              >
                 <TableCell>{index + 1}</TableCell>
                 <TableCell className="font-medium">
                   {question.question.title}
@@ -156,11 +156,6 @@ export function DueQuestions() {
                 </TableCell>
                 <TableCell>{question.question.difficulty}</TableCell>
                 <TableCell>{question.review_count}</TableCell>
-                <TableCell className="text-right">
-                  <Button size="sm" onClick={() => handleReview(question)}>
-                    Review
-                  </Button>
-                </TableCell>
               </TableRow>
             ))}
           </TableBody>

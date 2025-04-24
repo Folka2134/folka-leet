@@ -105,7 +105,7 @@ export function RevisionBank() {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <Button variant="outline" className="w-full">
+        <Button variant="secondary" className="w-full">
           View Current Revision Bank
         </Button>
       </DialogTrigger>

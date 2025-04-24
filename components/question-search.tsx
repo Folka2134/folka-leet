@@ -108,7 +108,8 @@ export function QuestionSearch() {
           {searchResults.map((question) => (
             <div
               key={question.id}
-              className="grid grid-cols-3 gap-4 items-center border-b pb-2"
+              className="grid grid-cols-3 gap-4 items-center border-b p-2 cursor-pointer transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted rounded-md"
+              onClick={() => handleAddQuestion(question)}
             >
               <div className="font-medium">{question.title}</div>
               <div>
@@ -127,16 +128,16 @@ export function QuestionSearch() {
                   </Badge>
                 ))}
               </div>
-              <Button
-                onClick={() => handleAddQuestion(question)}
-                disabled={isAdding !== null}
-                size="sm"
-                className="col-span-3"
-              >
-                {isAdding === question.id
-                  ? "Adding..."
-                  : "Add to Revision Bank"}
-              </Button>
+              {/* <Button */}
+              {/*   onClick={() => handleAddQuestion(question)} */}
+              {/*   disabled={isAdding !== null} */}
+              {/*   size="sm" */}
+              {/*   className="col-span-3" */}
+              {/* > */}
+              {/*   {isAdding === question.id */}
+              {/*     ? "Adding..." */}
+              {/*     : "Add to Revision Bank"} */}
+              {/* </Button> */}
             </div>
           ))}
         </div>
