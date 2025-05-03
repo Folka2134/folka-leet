@@ -9,6 +9,7 @@ export type Question = {
   difficulty: "Easy" | "Medium" | "Hard";
   tags: string[];
   leetcode_id?: string;
+  url: string;
 };
 
 export type UserQuestion = {
@@ -73,6 +74,7 @@ export async function addQuestionToBank(
         difficulty: question.difficulty,
         tags: question.tags || [],
         leetcode_id: question.leetcode_id || null,
+        url: question.url,
       };
 
       console.log("Question data to insert:", questionData);
@@ -154,7 +156,8 @@ export async function addQuestionToBank(
           title,
           difficulty,
           tags,
-          leetcode_id
+          leetcode_id,
+          url
         )
       `,
       )
@@ -192,6 +195,7 @@ export async function addQuestionToBank(
         difficulty: questionData.difficulty,
         tags: questionData.tags,
         leetcode_id: questionData.leetcode_id,
+        url: questionData.url,
       },
       difficulty_rating: userQuestion.difficulty_rating,
       next_review_date: userQuestion.next_review_date,
@@ -232,7 +236,8 @@ export async function getUserQuestions(): Promise<UserQuestion[]> {
           title,
           difficulty,
           tags,
-          leetcode_id
+          leetcode_id,
+          url
         )
       `,
       )
@@ -266,6 +271,7 @@ export async function getUserQuestions(): Promise<UserQuestion[]> {
             difficulty: questionData.difficulty,
             tags: questionData.tags,
             leetcode_id: questionData.leetcode_id,
+            url: questionData.url,
           },
           difficulty_rating: item.difficulty_rating,
           next_review_date: item.next_review_date,
@@ -310,7 +316,8 @@ export async function getDueQuestions(): Promise<UserQuestion[]> {
           title,
           difficulty,
           tags,
-          leetcode_id
+          leetcode_id,
+          url
         )
       `,
       )
@@ -345,6 +352,7 @@ export async function getDueQuestions(): Promise<UserQuestion[]> {
             difficulty: questionData.difficulty,
             tags: questionData.tags,
             leetcode_id: questionData.leetcode_id,
+            url: questionData.url,
           },
           difficulty_rating: item.difficulty_rating,
           next_review_date: item.next_review_date,
@@ -409,7 +417,8 @@ export async function reviewQuestion(
           title,
           difficulty,
           tags,
-          leetcode_id
+          leetcode_id,
+          url
         )
       `,
       )
@@ -440,6 +449,7 @@ export async function reviewQuestion(
         difficulty: questionData.difficulty,
         tags: questionData.tags,
         leetcode_id: questionData.leetcode_id,
+        url: questionData.url,
       },
       difficulty_rating: updatedUserQuestion.difficulty_rating,
       next_review_date: updatedUserQuestion.next_review_date,

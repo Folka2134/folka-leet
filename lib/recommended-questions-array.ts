@@ -7,6 +7,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Easy",
     tags: ["Array", "Hash Table"],
     leetcode_id: "1",
+    url: "https://leetcode.com/problems/two-sum/",
   },
   {
     id: 3,
@@ -14,6 +15,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Hash Table", "String", "Sliding Window"],
     leetcode_id: "3",
+    url: "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
   },
   {
     id: 11,
@@ -21,6 +23,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Array", "Two Pointers", "Greedy"],
     leetcode_id: "11",
+    url: "https://leetcode.com/problems/container-with-most-water/",
   },
   {
     id: 15,
@@ -28,6 +31,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Array", "Two Pointers", "Sorting"],
     leetcode_id: "15",
+    url: "https://leetcode.com/problems/3sum/",
   },
   {
     id: 19,
@@ -35,6 +39,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Linked List", "Two Pointers"],
     leetcode_id: "19",
+    url: "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
   },
   {
     id: 20,
@@ -42,6 +47,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Easy",
     tags: ["String", "Stack"],
     leetcode_id: "20",
+    url: "https://leetcode.com/problems/valid-parentheses/",
   },
   {
     id: 21,
@@ -49,6 +55,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Easy",
     tags: ["Linked List", "Recursion"],
     leetcode_id: "21",
+    url: "https://leetcode.com/problems/merge-two-sorted-lists/",
   },
   {
     id: 33,
@@ -56,6 +63,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Array", "Binary Search"],
     leetcode_id: "33",
+    url: "https://leetcode.com/problems/search-in-rotated-sorted-array/",
   },
   {
     id: 36,
@@ -63,6 +71,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Array", "Hash Table", "Matrix"],
     leetcode_id: "36",
+    url: "https://leetcode.com/problems/valid-sudoku/",
   },
   {
     id: 49,
@@ -70,6 +79,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Array", "Hash Table", "String", "Sorting"],
     leetcode_id: "49",
+    url: "https://leetcode.com/problems/group-anagrams/",
   },
   {
     id: 98,
@@ -77,6 +87,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Tree", "Depth-First Search", "Binary Search Tree", "Binary Tree"],
     leetcode_id: "98",
+    url: "https://leetcode.com/problems/validate-binary-search-tree/",
   },
   {
     id: 100,
@@ -84,6 +95,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Easy",
     tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
     leetcode_id: "100",
+    url: "https://leetcode.com/problems/same-tree/",
   },
   {
     id: 102,
@@ -91,6 +103,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Tree", "Breadth-First Search", "Binary Tree"],
     leetcode_id: "102",
+    url: "https://leetcode.com/problems/binary-tree-level-order-traversal/",
   },
   {
     id: 104,
@@ -98,6 +111,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Easy",
     tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
     leetcode_id: "104",
+    url: "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
   },
   {
     id: 110,
@@ -105,6 +119,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Easy",
     tags: ["Tree", "Depth-First Search", "Binary Tree"],
     leetcode_id: "110",
+    url: "https://leetcode.com/problems/balanced-binary-tree/",
   },
   {
     id: 121,
@@ -112,6 +127,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Easy",
     tags: ["Array", "Dynamic Programming"],
     leetcode_id: "121",
+    url: "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
   },
   {
     id: 125,
@@ -119,6 +135,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Easy",
     tags: ["Two Pointers", "String"],
     leetcode_id: "125",
+    url: "https://leetcode.com/problems/valid-palindrome/",
   },
   {
     id: 128,
@@ -126,6 +143,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Array", "Hash Table", "Union Find"],
     leetcode_id: "128",
+    url: "https://leetcode.com/problems/longest-consecutive-sequence/",
   },
   {
     id: 130,
@@ -139,6 +157,7 @@ export const leetcodeQuestions: Question[] = [
       "Matrix",
     ],
     leetcode_id: "130",
+    url: "https://leetcode.com/problems/surrounded-regions/",
   },
   {
     id: 133,
@@ -146,6 +165,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Hash Table", "Depth-First Search", "Breadth-First Search", "Graph"],
     leetcode_id: "133",
+    url: "https://leetcode.com/problems/clone-graph/",
   },
   {
     id: 141,
@@ -153,6 +173,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Easy",
     tags: ["Hash Table", "Linked List", "Two Pointers"],
     leetcode_id: "141",
+    url: "https://leetcode.com/problems/linked-list-cycle/",
   },
   {
     id: 143,
@@ -160,6 +181,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Linked List", "Two Pointers", "Stack", "Recursion"],
     leetcode_id: "143",
+    url: "https://leetcode.com/problems/reorder-list/",
   },
   {
     id: 146,
@@ -167,6 +189,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Hash Table", "Linked List", "Design", "Doubly-Linked List"],
     leetcode_id: "146",
+    url: "https://leetcode.com/problems/lru-cache/",
   },
   {
     id: 153,
@@ -174,6 +197,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Array", "Binary Search"],
     leetcode_id: "153",
+    url: "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
   },
   {
     id: 155,
@@ -181,6 +205,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Stack", "Design"],
     leetcode_id: "155",
+    url: "https://leetcode.com/problems/min-stack/",
   },
   {
     id: 167,
@@ -188,6 +213,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Array", "Two Pointers", "Binary Search"],
     leetcode_id: "167",
+    url: "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
   },
   {
     id: 199,
@@ -195,6 +221,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
     leetcode_id: "199",
+    url: "https://leetcode.com/problems/binary-tree-right-side-view/",
   },
   {
     id: 200,
@@ -208,6 +235,7 @@ export const leetcodeQuestions: Question[] = [
       "Matrix",
     ],
     leetcode_id: "200",
+    url: "https://leetcode.com/problems/number-of-islands/",
   },
   {
     id: 206,
@@ -215,6 +243,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Easy",
     tags: ["Linked List", "Recursion"],
     leetcode_id: "206",
+    url: "https://leetcode.com/problems/reverse-linked-list/",
   },
   {
     id: 207,
@@ -227,6 +256,7 @@ export const leetcodeQuestions: Question[] = [
       "Topological Sort",
     ],
     leetcode_id: "207",
+    url: "https://leetcode.com/problems/course-schedule/",
   },
   {
     id: 210,
@@ -239,6 +269,7 @@ export const leetcodeQuestions: Question[] = [
       "Topological Sort",
     ],
     leetcode_id: "210",
+    url: "https://leetcode.com/problems/course-schedule-ii/",
   },
   {
     id: 215,
@@ -252,6 +283,7 @@ export const leetcodeQuestions: Question[] = [
       "Quickselect",
     ],
     leetcode_id: "215",
+    url: "https://leetcode.com/problems/kth-largest-element-in-an-array/",
   },
   {
     id: 217,
@@ -259,6 +291,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Easy",
     tags: ["Array", "Hash Table", "Sorting"],
     leetcode_id: "217",
+    url: "https://leetcode.com/problems/contains-duplicate/",
   },
   {
     id: 226,
@@ -266,6 +299,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Easy",
     tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
     leetcode_id: "226",
+    url: "https://leetcode.com/problems/invert-binary-tree/",
   },
   {
     id: 230,
@@ -273,6 +307,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Tree", "Depth-First Search", "Binary Search Tree", "Binary Tree"],
     leetcode_id: "230",
+    url: "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
   },
   {
     id: 236,
@@ -280,6 +315,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Tree", "Depth-First Search", "Binary Tree"],
     leetcode_id: "236",
+    url: "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
   },
   {
     id: 238,
@@ -287,6 +323,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Array", "Prefix Sum"],
     leetcode_id: "238",
+    url: "https://leetcode.com/problems/product-of-array-except-self/",
   },
   {
     id: 242,
@@ -294,6 +331,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Easy",
     tags: ["Hash Table", "String", "Sorting"],
     leetcode_id: "242",
+    url: "https://leetcode.com/problems/valid-anagram/",
   },
   {
     id: 347,
@@ -310,6 +348,7 @@ export const leetcodeQuestions: Question[] = [
       "Quickselect",
     ],
     leetcode_id: "347",
+    url: "https://leetcode.com/problems/top-k-frequent-elements/",
   },
   {
     id: 417,
@@ -317,6 +356,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Array", "Depth-First Search", "Breadth-First Search", "Matrix"],
     leetcode_id: "417",
+    url: "https://leetcode.com/problems/pacific-atlantic-water-flow/",
   },
   {
     id: 424,
@@ -324,6 +364,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Hash Table", "String", "Sliding Window"],
     leetcode_id: "424",
+    url: "https://leetcode.com/problems/longest-repeating-character-replacement/",
   },
   {
     id: 543,
@@ -331,6 +372,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Easy",
     tags: ["Tree", "Depth-First Search", "Binary Tree"],
     leetcode_id: "543",
+    url: "https://leetcode.com/problems/diameter-of-binary-tree/",
   },
   {
     id: 572,
@@ -344,6 +386,7 @@ export const leetcodeQuestions: Question[] = [
       "Hash Function",
     ],
     leetcode_id: "572",
+    url: "https://leetcode.com/problems/subtree-of-another-tree/",
   },
   {
     id: 695,
@@ -357,6 +400,7 @@ export const leetcodeQuestions: Question[] = [
       "Matrix",
     ],
     leetcode_id: "695",
+    url: "https://leetcode.com/problems/max-area-of-island/",
   },
   {
     id: 703,
@@ -371,6 +415,7 @@ export const leetcodeQuestions: Question[] = [
       "Data Stream",
     ],
     leetcode_id: "703",
+    url: "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
   },
   {
     id: 704,
@@ -378,6 +423,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Easy",
     tags: ["Array", "Binary Search"],
     leetcode_id: "704",
+    url: "https://leetcode.com/problems/binary-search/",
   },
   {
     id: 739,
@@ -385,6 +431,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Array", "Stack", "Monotonic Stack"],
     leetcode_id: "739",
+    url: "https://leetcode.com/problems/daily-temperatures/",
   },
   {
     id: 1046,
@@ -392,6 +439,7 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Easy",
     tags: ["Array", "Heap (Priority Queue)"],
     leetcode_id: "1046",
+    url: "https://leetcode.com/problems/last-stone-weight/",
   },
   {
     id: 1448,
@@ -399,5 +447,6 @@ export const leetcodeQuestions: Question[] = [
     difficulty: "Medium",
     tags: ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
     leetcode_id: "1448",
+    url: "https://leetcode.com/problems/count-good-nodes-in-binary-tree/",
   },
 ];

@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/dialog";
 import { type UserQuestion, getDueQuestions, reviewQuestion } from "@/lib/api";
 import { toast } from "sonner";
+import { Link } from "lucide-react";
 
 export function DueQuestions() {
   const [dueQuestions, setDueQuestions] = useState<UserQuestion[]>([]);
@@ -167,17 +168,24 @@ export function DueQuestions() {
       >
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Review Question</DialogTitle>
+            <DialogTitle>
+              <a
+                className="flex items-center gap-2 underline underline-offset-2 hover:opacity-70 transition-all"
+                href={reviewingQuestion?.question.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {reviewingQuestion?.question.title}
+                <Link size={14} />
+              </a>
+            </DialogTitle>
             <DialogDescription>
               How difficult did you find this question?
             </DialogDescription>
           </DialogHeader>
 
           {reviewingQuestion && (
-            <div className="py-4">
-              <h3 className="font-bold text-lg">
-                {reviewingQuestion.question.title}
-              </h3>
+            <div className="pb-4">
               <div className="flex flex-wrap gap-1 mt-2">
                 {reviewingQuestion.question.tags.map((tag) => (
                   <Badge key={tag} variant="outline">
