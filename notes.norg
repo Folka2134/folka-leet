@@ -1,0 +1,35 @@
+* *Folka Leet*
+** Bugs
+   - (x) Unable to add question to bank
+   - (x) Search results don't clear after clearing input
+** Todo
+   - (x) Add favicon
+   - (x) Add logo
+   - (x) Implement fuzzy search with fuse.js
+   - (x) Move logged in user avatar to the right
+   - (x) Calibrate spaced repetition algorithm (update multiplier)
+   - (x) toast/error dialog when trying to add an already banked question
+   - ( ) Remove footer items
+   - (x) Add links to question on leetcode
+   - ( ) When question is on or past it's review date, display "due"
+   - ( ) Add overdue batch functionality
+   -- ( ) Display 1 batch of overdue questions per day (as well as questions due on the day)
+   -- ( ) Allow user to select max number of questions per batch
+   --- ( ) Display max batch number
+   -- ( ) Store a stack of overdue questions (FILO)
+   -- ( ) Display 1 batch of overdue questions per day (as well as questions due on the day)
+   -- ( ) Allow user to add next batch of overdue questions to the due list
+   -- ( ) Display number of overdue questions
+** Refactor
+   - ( ) Implement context to avoid page reload when adding questions to the banked
+   -- ( ) Update bank/due with useEffect
+   -- ( ) Clear search bar when question is added
+   - (x) Remove review button + action column
+   -- (x) Make the question the button
+   -  (x) Remove add to bank button
+   -- (x) Put "addToBank" function on question element (instead of small button)
+   -- (x) Delete add to bank button
+   - ( ) Remove logging
+   - ( ) Remove "settings"
+** Style
+

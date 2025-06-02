@@ -116,9 +116,9 @@ export function DueQuestions() {
       </div>
 
       {loading ? (
-        <div className="text-center py-8">Loading due questions...</div>
+        <div className="py-8 text-center">Loading due questions...</div>
       ) : dueQuestions.length === 0 ? (
-        <div className="text-center py-8 text-gray-500">
+        <div className="py-8 text-center text-gray-500">
           No questions due for revision today.
         </div>
       ) : (
@@ -138,7 +138,7 @@ export function DueQuestions() {
               <TableRow
                 key={question.id}
                 onClick={() => handleReview(question)}
-                className="cursor-pointer transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+                className="hover:bg-muted/50 data-[state=selected]:bg-muted cursor-pointer transition-colors"
               >
                 <TableCell>{index + 1}</TableCell>
                 <TableCell className="font-medium">
@@ -170,7 +170,7 @@ export function DueQuestions() {
           <DialogHeader>
             <DialogTitle>
               <a
-                className="flex items-center gap-2 underline underline-offset-2 hover:opacity-70 transition-all"
+                className="flex items-center gap-2 underline underline-offset-2 transition-all hover:opacity-70"
                 href={reviewingQuestion?.question.url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -186,7 +186,7 @@ export function DueQuestions() {
 
           {reviewingQuestion && (
             <div className="pb-4">
-              <div className="flex flex-wrap gap-1 mt-2">
+              <div className="mt-2 flex flex-wrap gap-1">
                 {reviewingQuestion.question.tags.map((tag) => (
                   <Badge key={tag} variant="outline">
                     {tag}
@@ -200,11 +200,10 @@ export function DueQuestions() {
               </p>
             </div>
           )}
-
           <DialogFooter className="flex justify-between sm:justify-between">
             <Button
               variant="outline"
-              className="bg-green-100 hover:bg-green-200 border-green-300"
+              className="border-green-300 bg-green-100 hover:bg-green-200"
               onClick={() => handleDifficultySelection("Easy")}
               disabled={isReviewing}
             >
@@ -212,7 +211,7 @@ export function DueQuestions() {
             </Button>
             <Button
               variant="outline"
-              className="bg-yellow-100 hover:bg-yellow-200 border-yellow-300"
+              className="border-yellow-300 bg-yellow-100 hover:bg-yellow-200"
               onClick={() => handleDifficultySelection("Medium")}
               disabled={isReviewing}
             >
@@ -220,7 +219,7 @@ export function DueQuestions() {
             </Button>
             <Button
               variant="outline"
-              className="bg-red-100 hover:bg-red-200 border-red-300"
+              className="border-red-300 bg-red-100 hover:bg-red-200"
               onClick={() => handleDifficultySelection("Hard")}
               disabled={isReviewing}
             >
